@@ -8,5 +8,4 @@
   with_items:
   - { regexp: 'LoginGraceTime 120' , line: 'LoginGraceTime 3600' }
   - { regexp: '#AuthorizedKeysFile	%h/.ssh/authorized_keys' , line: 'AuthorizedKeysFile	%h/.ssh/authorized_keys' }
-  notify: Restart ssh
   tags: sshd_config

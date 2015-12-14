@@ -1,3 +1,11 @@
 ---
 # tasks file for sshd
 - include: sshd_config.yml
+  notify: Restart ssh
+  when: ansible_os_family == 'Debian'
+
+- include: sshd_config.yml
+  notify: Restart sshd
+  when: ansible_os_family == 'RedHat'
+
+

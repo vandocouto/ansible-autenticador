@@ -5,6 +5,6 @@
     backup: yes
     content: |
       %super_users ALL=(root)NOPASSWD: ALL
-  notify: "Restart sudo"
+# notify: "Restart sudo"
 
 
