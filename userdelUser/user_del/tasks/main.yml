@@ -1,0 +1,5 @@
+---
+# tasks file for user_del
+- include: userdel.yml
+  tags: userdel
+

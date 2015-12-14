@@ -1,0 +1,9 @@
+---
+- name: "Ajustando o arquivo /etc/sudoers"
+  blockinfile:
+    dest: /etc/sudoers
+    backup: yes
+    content: |
+      %super_users ALL=(root)NOPASSWD: ALL
+
+

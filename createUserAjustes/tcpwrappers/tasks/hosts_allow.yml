@@ -1,0 +1,12 @@
+---
+- name: "Ajustando o arquivo /etc/hosts.allow"
+  blockinfile: 
+    dest: /etc/hosts.allow
+    backup: yes
+    content: | 
+      sshd: 192.168.96.140
+      sshd: 192.168.96.141
+      sshd: 192.168.5.74
+      sshd: 192.168.5.75
+      sshd: 127.0.0.1
+

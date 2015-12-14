@@ -1,0 +1,7 @@
+---
+- name: "Adicionando usuario no grupo superuser"
+  sudo: True
+  shell: gpasswd -d {{item}} super_users
+  with_items:
+   - "{{users}}"
+  tags: gpasswd

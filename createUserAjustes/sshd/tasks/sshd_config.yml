@@ -1,0 +1,12 @@
+---
+- name: "Ajustando o arquivo sshd_config"
+  lineinfile: 
+   dest: /etc/ssh/sshd_config
+   backup: yes 
+   regexp: "{{ item.regexp }}" 
+   line: "{{ item.line }}"
+  with_items:
+  - { regexp: 'LoginGraceTime 120' , line: 'LoginGraceTime 3600' }
+  - { regexp: '#AuthorizedKeysFile	%h/.ssh/authorized_keys' , line: 'AuthorizedKeysFile	%h/.ssh/authorized_keys' }
+  notify: Restart ssh
+  tags: sshd_config

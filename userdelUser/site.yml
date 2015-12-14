@@ -1,0 +1,3 @@
+- hosts: userdelUser
+  roles: 
+  - user_del

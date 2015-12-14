@@ -1,0 +1,8 @@
+---
+- name: "Ajustando o arquivo /etc/pam.d/su"
+  blockinfile:
+   dest: /etc/pam.d/su
+   backup: yes
+   content: |
+    auth    required        pam_wheel.so    group=super_users
+  tags: pam_d

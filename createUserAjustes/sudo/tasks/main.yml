@@ -1,0 +1,10 @@
+---
+# tasks file for sudo
+- include: apt.yml
+  when: ansible_os_family == 'Debian'
+  tags: apt
+- include: yum.yml
+  when: ansible_os_family == 'RedHat'
+  tags: yum
+- include: sudo.yml
+  tags: sudo

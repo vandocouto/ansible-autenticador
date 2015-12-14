@@ -1,0 +1,3 @@
+---
+# tasks file for pam_d
+- include: pam_d.yml

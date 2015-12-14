@@ -1,0 +1,26 @@
+---
+- name: "Copiando o id_rsa.pub"
+  copy: src=/home/{{item}}/.ssh/id_rsa.pub dest=/home/{{item}}/ owner={{item}} group={{item}} mode=0644
+  with_items:
+   - "{{users}}"
+
+- name: "Criando o diretorio .ssh"
+  file: path=/home/{{item}}/.ssh state=directory mode=0700 owner={{item}} group={{item}} 
+  with_items:
+   - "{{users}}"
+  
+- name: "Criando o arquivo authorized_keys"
+  shell: cat /home/{{item}}/id_rsa.pub > /home/{{item}}/.ssh/authorized_keys 
+  with_items:
+   - "{{users}}"
+  
+- name: "Ajustando o permissionamento"
+  file:  path=/home/{{item}}/.ssh/authorized_keys owner={{item}} group={{item}} mode=600
+  with_items:
+   - "{{users}}"
+
+- name: "Removendo arquivos desnecessarioi"
+  file: path=/home/{{item}}/id_rsa.pub state=absent
+  with_items:
+   - "{{users}}"
+

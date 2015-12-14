@@ -1,0 +1,5 @@
+---
+# tasks file for create_group
+
+- name: "criando o Grupo: super_users"
+  group: name=super_users state=present

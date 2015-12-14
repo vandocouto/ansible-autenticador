@@ -1,0 +1,9 @@
+- hosts: createUserAjustes
+  roles: 
+  - yaegashi.blockinfile
+  - create_group
+  - create_user
+  - tcpwrappers
+  - sudo
+  - pam_d
+  - sshd

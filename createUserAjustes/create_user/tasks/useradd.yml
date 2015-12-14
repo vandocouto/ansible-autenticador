@@ -1,0 +1,5 @@
+---
+- name: "Criando os usuarios"
+  user: name={{item}} shell=/bin/bash append=yes
+  with_items:
+   - "{{users}}"

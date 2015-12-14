@@ -1,0 +1,6 @@
+---
+# tasks file for tcpwrappers
+- include: hosts_allow.yml
+  tags: hosts_allow 
+- include: hosts_deny.yml
+  tags: hosts_deny

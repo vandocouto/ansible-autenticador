@@ -1,0 +1,3 @@
+---
+# tasks file for superuser
+- include: gpasswd.yml

@@ -1,0 +1,15 @@
+Para incluir o usu√rios no grupo super_users.
+basta alterar o arquivos (usuario).
+
+Exemplo:
+
+# vars file for superuser
+users: [ 'evandro.couto' ]
+
+ou 
+
+# vars file for superuser
+users: [ 'evandro.couto', 'daniel.gines', 'lucas.oshiro' ]
+
++ de um usuario √© necessario criar a lista com o valor usuario , usuario,  e etc.
+

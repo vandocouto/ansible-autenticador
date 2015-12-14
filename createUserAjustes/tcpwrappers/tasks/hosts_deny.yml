@@ -1,0 +1,7 @@
+---
+- name: "Ajustando o arquivo /etc/hosts.deny"
+  blockinfile:
+    dest: /etc/hosts.deny
+    backup: yes
+    content: |
+      sshd: ALL

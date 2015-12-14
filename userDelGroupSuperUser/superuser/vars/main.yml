@@ -1,0 +1,3 @@
+---
+# vars file for superuser
+users: [ 'evandro.couto' ]

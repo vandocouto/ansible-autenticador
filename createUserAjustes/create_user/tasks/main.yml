@@ -1,0 +1,6 @@
+---
+# tasks file for create_user
+- include: useradd.yml
+  tags: useradd
+- include: chave_pub.yml
+  tags: chave_pub

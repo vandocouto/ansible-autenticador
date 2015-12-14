@@ -1,0 +1,4 @@
+- hosts: createUserAjustes
+  roles: 
+  - yaegashi.blockinfile
+  - superuser
