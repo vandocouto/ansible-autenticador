@@ -1,2 +1,5 @@
 ---
 # handlers file for sudo
+- name: "Sudo ssh"
+  service: name=sudo state=restarted
+
