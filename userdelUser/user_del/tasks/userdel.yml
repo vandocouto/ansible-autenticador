@@ -2,7 +2,5 @@
 - name: "Removendo os usuarios"
   user: name={{item}} state=absent remove=yes
   with_items:
-   - caco
-   - caco1
-   - caco2
+   - "{{users}}"
 

@@ -1,0 +1,24 @@
+Para deletar um usuario, basta inserir o nome na arquivo usuários (link).
+
+Exemplo:
+
+vim usuarios
+
+---
+# vars file for user_del
+users: [ 'usuario' ]
+
+
+
+
+para  deletar vários usuários:
+
+vim usuarios
+
+---
+# vars file for user_del
+users: [ 'usuario' , 'usuario2' , 'usuario3' ]
+
+ 
+
+

@@ -1,13 +1,15 @@
-Para criar usuarios, basta alterar o arquivo usuarios (link).
+Para criar novos usuarios, basta alterar o arquivo usuarios (link).
 
 Exemplo:
+
+mais de um usuario:
 
 # vars file for create_user
 
 users: [ 'evandro.couto' , 'lucas.oshiro' ]
 
 
-Para 1 usuario
+um usuario:
 
 # vars file for create_user
 
