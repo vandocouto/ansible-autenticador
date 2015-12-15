@@ -1,0 +1,14 @@
+---
+- name: "Instalacao do fail2ban - APT"
+  apt: name=fail2ban state=present
+
+
+- name: "Ajustando o arquivo de configuracao - Debian"
+  template: src=jail.conf-debian dest=/etc/fail2ban/jail.conf
+
+- name: "Iniciando o fail2ban - Debian"
+  service:
+   name: fail2ban
+   state: running
+   enabled: yes
+  notify: restart fail2ban

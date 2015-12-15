@@ -1,0 +1,6 @@
+---
+# tasks file for fail2ban
+- include: apt.yml
+  when: ansible_os_family == 'Debian'
+- include: yum.yml
+  when: ansible_os_family == 'RedHat'

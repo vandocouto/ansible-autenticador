@@ -1,0 +1,18 @@
+---
+- name: "Instalacao do epel - YUM"
+  yum: name=epel-release.noarch state=latest
+  tags: yum-epel
+
+- name: "Instalacao do fail2ban - YUM"
+  yum: name=fail2ban state=latest
+  tags: yum-fail2ban
+
+- name: "Ajustando o arquivo de configuracao - CentOS"
+  template: src=jail.conf-centos dest=/etc/fail2ban/jail.conf
+
+- name: "Iniciando o fail2ban - CentOS"
+  service: 
+   name: fail2ban
+   state: running
+   enabled: yes 
+  notify: restart fail2ban

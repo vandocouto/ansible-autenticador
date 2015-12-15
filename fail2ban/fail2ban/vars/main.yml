@@ -1,0 +1,22 @@
+---
+# vars file for fail2ban
+fail2ban:
+ debian:
+  ignoreip: 127.0.0/8
+  bantime: 3660
+  maxretry: 3
+  enabled: true
+  port: ssh
+  filter: sshd
+  logpath: /var/log/auth.log
+  action:  iptables[name=SSH, port=ssh, protocol=tcp]
+ centos:
+  ignoreip: 127.0.0.1/8
+  bantime: 3660
+  maxretry: 3
+  enabled: true
+  port: ssh
+  filter: sshd
+  logpath: /var/log/secure
+  action:  iptables[name=SSH, port=ssh, protocol=tcp]
+
